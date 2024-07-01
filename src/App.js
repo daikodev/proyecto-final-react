@@ -6,8 +6,8 @@ import Home from './views/Home';
 
 function App() {
   return (
-    <div className="App">
-
+    <div className="container-fluid p-0 vh-100">
+      {/* Quitar vh-100 si se malogra para movil */}
       <BrowserRouter>
         <Routes>
           <Route exact path='/' Component={Login} />

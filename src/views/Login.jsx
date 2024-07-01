@@ -1,6 +1,7 @@
 // rfce
 import React, { useEffect, useState } from 'react'
 import { Navigate, useNavigate } from 'react-router-dom';
+import pikachu from '../assets/pikachu.jpeg';
 
 function Login() {
 
@@ -14,7 +15,7 @@ function Login() {
     useEffect(() => { // Redirigir a Home si existe un usuario en localStorage
         const saveUser = localStorage.getItem('user');
 
-        if(saveUser) {
+        if (saveUser) {
             navigate('/Home')
         }
 
@@ -47,7 +48,7 @@ function Login() {
                 document.getElementById("txtUsuario").value = "";
                 document.getElementById("txtPassword").value = "";
                 document.getElementById("txtUsuario").focus();
-                
+
             }
         }
 
@@ -55,26 +56,34 @@ function Login() {
 
     return (
         <>
-            <div>
-                <form action="">
-                    <h2>Bienvenido</h2>
+            <section className='row g-0 vh-100'> {/* g-0: quitar margenes negativos (oculta barra de desplazamiento) */}
+                {/* Quitar vh-100 si se malogra para movil */}
+                <div className='col-8 d-none d-sm-inline'>
+                    <img src={pikachu} alt="..." className='img-fluid w-100 vh-100' />
+                </div>
 
-                    <div className='d-flex flex-column'>
-                        <label htmlFor="txtUsuario">Usuario</label>
-                        <input type="text" id="txtUsuario" onChange={(e) => setUser(e.target.value)} required />
-                    </div>
+                <div className='col-12 col-xl-4 d-flex flex-column justify-content-center align-items-center'>
+                    <form action="">
+                        <h2>Bienvenido</h2>
 
-                    <div className='d-flex flex-column'>
-                        <label htmlFor="txtPassword">Contraseña</label>
-                        <input type="password" id="txtPassword" onChange={(e) => setPassword(e.target.value)} required />
-                    </div>
+                        <div className='d-flex flex-column'>
+                            <label htmlFor="txtUsuario">Usuario</label>
+                            <input type="text" id="txtUsuario" onChange={(e) => setUser(e.target.value)} required />
+                        </div>
 
-                    <input type="submit" value="Iniciar Sesión" onClick={iniciarSesion} />
+                        <div className='d-flex flex-column'>
+                            <label htmlFor="txtPassword">Contraseña</label>
+                            <input type="password" id="txtPassword" onChange={(e) => setPassword(e.target.value)} required />
+                        </div>
 
-                    {error && <p>Todos los campos son obligatorios.</p>}
-                    {loginFailed && <p>Credenciales incorrectas.</p>}
-                </form>
-            </div>
+                        <input type="submit" value="Iniciar Sesión" onClick={iniciarSesion} />
+
+                        {error && <p>Todos los campos son obligatorios.</p>}
+                        {loginFailed && <p>Credenciales incorrectas.</p>}
+                    </form>
+                </div>
+
+            </section>
         </>
     )
 }
