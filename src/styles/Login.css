@@ -1,0 +1,13 @@
+.form-control {
+    background-color: #edf2f4;
+    border: none;
+}
+
+.boton,
+.form-control {
+    padding: 10px;
+}
+
+.form-control::placeholder {
+    color: #959393;
+}

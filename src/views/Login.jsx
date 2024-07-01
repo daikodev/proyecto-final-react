@@ -1,6 +1,7 @@
 // rfce
 import React, { useEffect, useState } from 'react'
 import { Navigate, useNavigate } from 'react-router-dom';
+import '../styles/Login.css';
 import pikachu from '../assets/pikachu.jpeg';
 
 function Login() {
@@ -63,23 +64,25 @@ function Login() {
                 </div>
 
                 <div className='col-12 col-xl-4 d-flex flex-column justify-content-center align-items-center'>
-                    <form action="">
-                        <h2>Bienvenido</h2>
+                    <form action="" className='row w-100 justify-content-center align-items-center'>
+                        <div className='col-10'>
+                            <h2 className='text-center'>Bienvenido!</h2>
 
-                        <div className='d-flex flex-column'>
-                            <label htmlFor="txtUsuario">Usuario</label>
-                            <input type="text" id="txtUsuario" onChange={(e) => setUser(e.target.value)} required />
+                            <div className='d-flex flex-column form-group my-4'>
+                                <label htmlFor="txtUsuario" className='fw-bold pb-2'>Nombre de Usuario</label>
+                                <input type="text" id="txtUsuario" onChange={(e) => setUser(e.target.value)} className='form-control px-3' placeholder='Ingresa tu nombre de usuario' required />
+                            </div>
+
+                            <div className='d-flex flex-column form-group my-4'>
+                                <label htmlFor="txtPassword" className='fw-bold pb-2'>Contraseña</label>
+                                <input type="password" id="txtPassword" onChange={(e) => setPassword(e.target.value)} className='form-control px-3' placeholder='Ingresa tu contraseña' required />
+                            </div>
+
+                            <input type="submit" value="Iniciar Sesión" onClick={iniciarSesion} className='btn btn-dark boton w-100 mb-4' />
+
+                            {error && <p>Todos los campos son obligatorios.</p>}
+                            {loginFailed && <p>Credenciales incorrectas.</p>}
                         </div>
-
-                        <div className='d-flex flex-column'>
-                            <label htmlFor="txtPassword">Contraseña</label>
-                            <input type="password" id="txtPassword" onChange={(e) => setPassword(e.target.value)} required />
-                        </div>
-
-                        <input type="submit" value="Iniciar Sesión" onClick={iniciarSesion} />
-
-                        {error && <p>Todos los campos son obligatorios.</p>}
-                        {loginFailed && <p>Credenciales incorrectas.</p>}
                     </form>
                 </div>
 
