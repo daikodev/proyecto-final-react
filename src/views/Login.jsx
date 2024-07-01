@@ -78,10 +78,12 @@ function Login() {
                                 <input type="password" id="txtPassword" onChange={(e) => setPassword(e.target.value)} className='form-control px-3' placeholder='Ingresa tu contraseña' required />
                             </div>
 
-                            <input type="submit" value="Iniciar Sesión" onClick={iniciarSesion} className='btn btn-dark boton w-100 mb-4' />
+                            <div className='text-danger'>
+                                {error && <p>Todos los campos son obligatorios. Por favor, completa toda la información.</p>}
+                                {loginFailed && <p>Usuario o contraseña incorrectos. Por favor, verifica tus datos e inténtalo de nuevo.</p>}
+                            </div>
 
-                            {error && <p>Todos los campos son obligatorios.</p>}
-                            {loginFailed && <p>Credenciales incorrectas.</p>}
+                            <input type="submit" value="Iniciar Sesión" onClick={iniciarSesion} className='btn btn-dark boton w-100 mb-4' />
                         </div>
                     </form>
                 </div>
