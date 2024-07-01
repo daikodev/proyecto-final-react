@@ -59,11 +59,11 @@ function Login() {
         <>
             <section className='row g-0 vh-100'> {/* g-0: quitar margenes negativos (oculta barra de desplazamiento) */}
                 {/* Quitar vh-100 si se malogra para movil */}
-                <div className='col-8 d-none d-sm-inline'>
+                <div className='col-xl-8 d-none d-sm-inline d-sm-none d-xl-block'>
                     <img src={pikachu} alt="..." className='img-fluid w-100 vh-100' />
                 </div>
 
-                <div className='col-12 col-xl-4 d-flex flex-column justify-content-center align-items-center'>
+                <div className='col-xl-4 col-md-12 col-sm-12 d-flex flex-column justify-content-center align-items-center'>
                     <form action="" className='row w-100 justify-content-center align-items-center'>
                         <div className='col-10'>
                             <h2 className='text-center'>Bienvenido!</h2>
