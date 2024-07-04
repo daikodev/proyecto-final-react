@@ -2,7 +2,7 @@ import './styles/App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Login from './views/Login';
 import Layout from './components/layout/Layout';
-import Home from './views/Home';
+import Store from './views/Store';
 
 function App() {
   return (
@@ -12,8 +12,8 @@ function App() {
         <Routes>
           <Route exact path='/' Component={Login} />
 
-          <Route exact path='/Home' Component={Layout}>
-            <Route index Component={Home} />
+          <Route exact path='/Store' Component={Layout}>
+            <Route index Component={Store} />
             {/* <Route exact path="Test" Component={Test}/> */}
           </Route>
         </Routes>

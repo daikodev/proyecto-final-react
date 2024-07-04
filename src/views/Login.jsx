@@ -17,7 +17,7 @@ function Login() {
         const saveUser = localStorage.getItem('user');
 
         if (saveUser) {
-            navigate('/Home')
+            navigate('/Store')
         }
 
     }, [Navigate]);
@@ -35,10 +35,11 @@ function Login() {
 
         } else {
             if (user === "admin" && password === "123") {
+                // Guardar usuario dentro de un array dentro del localstorage
 
                 localStorage.setItem('user', user); // Guardar usuario en localStorage
                 setLogin(true);
-                navigate('/Home');
+                navigate('/Store');
 
             } else {
 
