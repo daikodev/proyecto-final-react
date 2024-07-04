@@ -67,7 +67,7 @@ function Login() {
                 <div className='col-xl-4 col-md-12 col-sm-12 d-flex flex-column justify-content-center align-items-center'>
                     <form action="" className='row w-100 justify-content-center align-items-center'>
                         <div className='col-10'>
-                            <h2 className='text-center'>Bienvenido!</h2>
+                            <h2 className='text-center fw-bold'>Bienvenido!</h2>
 
                             <div className='d-flex flex-column form-group my-4'>
                                 <label htmlFor="txtUsuario" className='fw-bold pb-2'>Nombre de Usuario</label>

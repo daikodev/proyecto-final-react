@@ -21,10 +21,10 @@ function Header() {
     return (
         <>
             <header>
-                <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+                <nav className="navbar navbar-expand-lg navbar-dark">
                     <div className="container-fluid px-5 text-light">
 
-                        <span>TIENDA</span>
+                        <span className='fs-5'>TIENDA</span>
 
                         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                             <span className="navbar-toggler-icon"></span>
@@ -35,7 +35,7 @@ function Header() {
 
                                 <li className="nav-item dropdown">
                                     <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                        <span>{user.toUpperCase()}</span>
+                                        <span className='fs-6'>{user.toUpperCase()}</span>
                                     </a>
                                     <ul className="dropdown-menu dropdown-menu-dark dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
                                         <li><a className="dropdown-item" href="" onClick={cerrarSesion}>Cerrar Sesión</a></li>

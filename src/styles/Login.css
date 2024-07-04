@@ -11,3 +11,7 @@
 .form-control::placeholder {
     color: #959393 !important;
 }
+
+.btn-dark {
+    background-color: #1E1E1E !important;
+}
