@@ -22,13 +22,13 @@ function Login() {
 
     }, [Navigate]);
 
-    const iniciarSesion = (e) => {
+    const loginUser = (e) => {
         e.preventDefault();
 
-        let txtUsuario = document.getElementById("txtUsuario").value;
+        let txtUser = document.getElementById("txtUser").value;
         let txtPassword = document.getElementById("txtPassword").value;
 
-        if (txtUsuario.length === 0 || txtPassword.length === 0) {
+        if (txtUser.length === 0 || txtPassword.length === 0) {
 
             setError(true);
             setLoginFailed(false);
@@ -47,9 +47,9 @@ function Login() {
                 setLoginFailed(true);
                 setError(false);
 
-                document.getElementById("txtUsuario").value = "";
+                document.getElementById("txtUser").value = "";
                 document.getElementById("txtPassword").value = "";
-                document.getElementById("txtUsuario").focus();
+                document.getElementById("txtUser").focus();
 
             }
         }
@@ -70,8 +70,8 @@ function Login() {
                             <h2 className='text-center fw-bold'>Bienvenido!</h2>
 
                             <div className='d-flex flex-column form-group my-4'>
-                                <label htmlFor="txtUsuario" className='fw-bold pb-2'>Nombre de Usuario</label>
-                                <input type="text" id="txtUsuario" onChange={(e) => setUser(e.target.value)} className='form-control px-3' placeholder='Ingresa tu nombre de usuario' required />
+                                <label htmlFor="txtUser" className='fw-bold pb-2'>Nombre de Usuario</label>
+                                <input type="text" id="txtUser" onChange={(e) => setUser(e.target.value)} className='form-control px-3' placeholder='Ingresa tu nombre de usuario' required />
                             </div>
 
                             <div className='d-flex flex-column form-group my-4'>
@@ -84,7 +84,7 @@ function Login() {
                                 {loginFailed && <p>Usuario o contraseña incorrectos. Por favor, verifica tus datos e inténtalo de nuevo.</p>}
                             </div>
 
-                            <input type="submit" value="Iniciar Sesión" onClick={iniciarSesion} className='btn btn-dark boton w-100 mb-4' />
+                            <input type="submit" value="Iniciar Sesión" onClick={loginUser} className='btn btn-dark boton w-100 mb-4' />
                         </div>
                     </form>
                 </div>
