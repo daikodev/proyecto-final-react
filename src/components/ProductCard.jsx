@@ -13,7 +13,7 @@ function ProductCard({ product }) {
 
     return (
         <>
-            <div className="col-3">
+            <div className="col-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3">
                 <div className="card">
                     <img src={product.image} alt="{product.title}" className="card-img-top img-fluid p-3" />
                     <div className="card-body">
