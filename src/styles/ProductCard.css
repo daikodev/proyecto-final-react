@@ -28,11 +28,11 @@ img {
     font-size: 14px;
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    line-clamp: 3;
-    -webkit-line-clamp: 3;
+    line-clamp: 2;
+    -webkit-line-clamp: 2;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: normal;
-    max-height: 4.5em;
-    min-height: 4.5em;
+    max-height: 3em;
+    min-height: 3em;
 }
