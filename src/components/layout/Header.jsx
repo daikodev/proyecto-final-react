@@ -12,7 +12,7 @@ function Header() {
         }
     })
 
-    const cerrarSesion = () => { // Cerrar Sesion, eliminando usuario de localStorage
+    const logoutUser = () => { // Cerrar Sesion, eliminando usuario de localStorage
         localStorage.removeItem('user');
         navigate('/')
     }
@@ -38,7 +38,7 @@ function Header() {
                                         <span className='fs-6'>{user.toUpperCase()}</span>
                                     </a>
                                     <ul className="dropdown-menu dropdown-menu-dark dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
-                                        <li><a className="dropdown-item" href="" onClick={cerrarSesion}>Cerrar Sesión</a></li>
+                                        <li><a className="dropdown-item" href="" onClick={logoutUser}>Cerrar Sesión</a></li>
                                     </ul>
                                 </li>
 
