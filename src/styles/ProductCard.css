@@ -11,3 +11,28 @@ img {
     height: 100% !important;
     align-items: center !important;
 }
+
+.card-title {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    line-clamp: 2;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    max-height: 2.5em;
+    min-height: 2.5em;
+}
+
+.card-text {
+    font-size: 14px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    line-clamp: 3;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    max-height: 4.5em;
+    min-height: 4.5em;
+}
