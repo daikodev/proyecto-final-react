@@ -1,12 +1,11 @@
 // rfce
 import React, { useEffect, useState } from 'react'
-import { Navigate, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import '../styles/Login.css';
 import pikachu from '../assets/pikachu.jpeg';
 
 function Login() {
-
-    const [login, setLogin] = useState(false);
+    // const [login, setLogin] = useState(false);
     const [user, setUser] = useState("");
     const [password, setPassword] = useState("");
     const [error, setError] = useState(false);
@@ -20,7 +19,7 @@ function Login() {
             navigate('/Store')
         }
 
-    }, [Navigate]);
+    }, [navigate]);
 
     const loginUser = (e) => {
         e.preventDefault();
@@ -29,21 +28,17 @@ function Login() {
         let txtPassword = document.getElementById("txtPassword").value;
 
         if (txtUser.length === 0 || txtPassword.length === 0) {
-
             setError(true);
             setLoginFailed(false);
 
         } else {
             if (user === "admin" && password === "123") {
-                // Guardar usuario dentro de un array dentro del localstorage
-
                 localStorage.setItem('user', user); // Guardar usuario en localStorage
-                setLogin(true);
                 navigate('/Store');
+                // setLogin(true);
 
             } else {
-
-                setLogin(false);
+                // setLogin(false);
                 setLoginFailed(true);
                 setError(false);
 
@@ -53,7 +48,6 @@ function Login() {
 
             }
         }
-
     }
 
     return (
