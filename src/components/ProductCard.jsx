@@ -15,7 +15,7 @@ function ProductCard({ product }) {
         <>
             <div className="col-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3">
                 <div className="card">
-                    <img src={product.image} alt="{product.title}" className="card-img-top img-fluid p-3" />
+                    <img src={product.image} alt="{product.title}" className="card-img-top img-fluid p-3 img-card" />
                     <div className="card-body">
                         <h6 className="text-secondary">{product.category.toUpperCase()}</h6>
                         <h4 className="card-title m-0">{product.title}</h4>
