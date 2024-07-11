@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Login from './views/Login';
 import Layout from './components/layout/Layout';
 import Store from './views/Store';
+import Products from './views/Products';
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
 
           <Route exact path='/Store' Component={Layout}>
             <Route index Component={Store} />
-            {/* <Route exact path="Test" Component={Test}/> */}
+            <Route exact path="Products" Component={Products} />
           </Route>
         </Routes>
       </BrowserRouter>
