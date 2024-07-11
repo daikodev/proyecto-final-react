@@ -9,7 +9,7 @@ function Product({ product }) {
                 <td>{product.title}</td>
                 <td>{product.description}</td>
                 <td>{product.price}</td>
-                <td><img src={product.image} alt="..." /></td>
+                <td><img src={product.image} alt="..." className="img-fluid" /></td>
             </tr>
         </>
     )

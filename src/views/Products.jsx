@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import Product from '../components/Product';
+import ProductRow from '../components/ProductRow';
 
 function Products() {
     const [products, setProducts] = useState([]);
@@ -32,7 +32,7 @@ function Products() {
                     </thead>
                     <tbody>
                         {products.map((product) => (
-                            <Product key={product.id} product={product} />
+                            <ProductRow key={product.id} product={product} />
                         ))}
                     </tbody>
                 </table>
