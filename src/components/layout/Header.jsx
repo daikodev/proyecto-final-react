@@ -1,21 +1,23 @@
 import React, { useEffect } from 'react'
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import '../../styles/Header.css'
 
 function Header() {
     const navigate = useNavigate();
-    const user = localStorage.getItem('user');
+    const location = useLocation()
+    console.log(location)
+    const user = localStorage.getItem("user");
 
     useEffect(() => { // Verificar si hay un usuario en localStorage
         if (!user) {
-            navigate('/')
+            navigate("/")
         }
     })
 
     const logoutUser = () => { // Cerrar Sesion, eliminando usuario de localStorage
-        localStorage.removeItem('user');
-        navigate('/')
+        localStorage.removeItem("user");
+        navigate("/")
     }
 
 
@@ -25,7 +27,7 @@ function Header() {
                 <nav className="navbar navbar-expand-lg navbar-dark">
                     <div className="container-fluid px-5 text-light">
 
-                        <span className='fs-5'>SISTEMA</span>
+                        <span className="fs-5">SISTEMA</span>
 
                         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                             <span className="navbar-toggler-icon"></span>
@@ -35,16 +37,16 @@ function Header() {
                             <ul className="navbar-nav">
 
                                 <li className="nav-item">
-                                    <Link to="/Store" className='nav-link'>Tienda</Link>
+                                    <Link to="/Store" className={`nav-link ${location.pathname === "/Store" ? "active" : ""}`}>Tienda</Link>
                                 </li>
 
                                 <li className="nav-item">
-                                    <Link to="/Store/Products" className="nav-link">Productos</Link>
+                                    <Link to="/Store/Products" className={`nav-link ${location.pathname === "/Store/Products" ? "active" : ""}`}>Productos</Link>
                                 </li>
 
                                 <li className="nav-item dropdown">
                                     <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                        <span className='fs-6'>{user.toUpperCase()}</span>
+                                        <span className="fs-6">{user.toUpperCase()}</span>
                                     </a>
                                     <ul className="dropdown-menu dropdown-menu-dark dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
                                         <li>

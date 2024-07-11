@@ -1,6 +1,7 @@
 import React from 'react'
+import '../styles/ProductRow.css'
 
-function Product({ product }) {
+function ProductRow({ product }) {
     return (
         <>
             <tr>
@@ -9,10 +10,10 @@ function Product({ product }) {
                 <td>{product.title}</td>
                 <td>{product.description}</td>
                 <td>{product.price}</td>
-                <td><img src={product.image} alt="..." className="img-fluid" /></td>
+                <td><img src={product.image} alt="..." className="img-fluid img-row" /></td>
             </tr>
         </>
     )
 }
 
-export default Product
+export default ProductRow
