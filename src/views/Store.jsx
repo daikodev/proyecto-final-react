@@ -27,8 +27,8 @@ function Store() {
 
   return (
     <>
-      <section className='container'>
-        <div className='row g-4 py-5'>
+      <section className='container py-5'>
+        <div className='row g-4'>
           {isLoading ? (
             Array.from({ length: 20 }).map((_, index) => (
               <ProductLoader key={index} />
