@@ -45,12 +45,12 @@ function Header() {
                                 </li>
 
                                 <li className="nav-item dropdown">
-                                    <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <button className="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
                                         <span className="fs-6">{user.toUpperCase()}</span>
-                                    </a>
+                                    </button>
                                     <ul className="dropdown-menu dropdown-menu-dark dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
                                         <li>
-                                            <a className="dropdown-item" href="" onClick={logoutUser}>Cerrar Sesión</a>
+                                            <button className="dropdown-item" onClick={logoutUser}>Cerrar Sesión</button>
                                         </li>
                                     </ul>
                                 </li>
