@@ -1,11 +1,11 @@
-import React from 'react'
+import React from "react";
 
 function Footer() {
   return (
     <footer>
-      <div className='bg-dark'>a</div>
+      <div className="bg-dark">a</div>
     </footer>
-  )
+  );
 }
 
-export default Footer
+export default Footer;
