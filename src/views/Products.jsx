@@ -33,6 +33,7 @@ function Products() {
                 <th scope="col">DESCRIPCIÓN</th>
                 <th scope="col">PRECIO</th>
                 <th scope="col">IMAGEN</th>
+                <th scope="col">ACCIONES</th>
               </tr>
             </thead>
             <tbody>
